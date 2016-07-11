@@ -1,4 +1,4 @@
-  var express = require('express');
+var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
 var db = require('../db/api');
@@ -65,8 +65,11 @@ router.get('/add', function(req, res, next) {
     console.log(user);
     res.render('add', {user:user})
   })
-
 });
+
+router.get('/delete', function(req,res,next){
+  res.redirect('/home')
+})
 
 router.post('/add', function(req, res, next) {
   db.addRestaurant(req.body).then(function() {

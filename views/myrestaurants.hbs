@@ -1,7 +1,13 @@
 <h1>Sanity Check</h1>
 
-<ul>
-  {{#each restaurants}}
-  <li>{{this.name}}</li>
-  {{/each}}
-</ul>
+<div class="form">
+  <form action="/myrestaurants" method="post">
+    <select name="restaurant">
+      {{#each restaurants}}
+        <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+  </form>
+</div>
+<a href="/delete"><button type="button">Delete Restaurant</button></a>
+<a href="/home"><button type="button">Back</button></a>

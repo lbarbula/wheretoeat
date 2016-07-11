@@ -18,5 +18,8 @@ module.exports = {
   },
   getRestaurants: function(id) {
     return knex('restaurant').where('user_id', id)
+  },
+  deleteRestaurant: (id) => {
+    return knext('restaurant').where('id', id).del()
   }
 }

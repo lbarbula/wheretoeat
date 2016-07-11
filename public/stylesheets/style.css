@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+form {
+  border: 1px solid red;
+}
+
+.form {
+  height: 40vh;
+}
